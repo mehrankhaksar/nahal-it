@@ -1,7 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
+
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
+
 import { Mail } from "lucide-react";
 
 const footerLinks = [
@@ -31,8 +33,8 @@ const Footer = () => {
   return (
     <footer className="bg-primary py-10">
       <div className="container mx-auto">
-        <div className="grid grid-cols-3 gap-8">
-          <Link className="w-fit bg-white p-16 rounded-xl" href="/">
+        <div className="grid md:grid-cols-3 gap-8">
+          <Link className="w-fit bg-white mx-auto p-16 rounded-xl" href="/">
             <Image
               src="/assets/images/logo.png"
               width={250}
