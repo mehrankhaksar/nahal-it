@@ -3,7 +3,6 @@
 import React from "react";
 
 import Link from "next/link";
-import Image from "next/image";
 
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
@@ -11,6 +10,8 @@ import { Input } from "./ui/input";
 import { UserCircle2, Search } from "lucide-react";
 
 import Nav from "./Nav";
+import MobileNav from "./MobileNav";
+import HeaderLogo from "./HeaderLogo";
 
 const Header = () => {
   const [scroll, setScroll] = React.useState(false);
@@ -32,29 +33,26 @@ const Header = () => {
       >
         <div className="container mx-auto">
           <div className={`flex justify-between items-center`}>
-            <Link href="/">
-              <Image
-                src="/assets/images/logo.png"
-                width={120}
-                height={60}
-                priority
-                alt="Logo"
-              />
-            </Link>
+            <HeaderLogo />
             <Nav
-              containerStyles="flex items-center gap-5"
+              containerStyles="hidden lg:flex items-center gap-5"
               linkStyles="text-lg font-medium"
             />
-            <Link href="/">
-              <Button className="p-1.5 rounded-full" variants="primary">
-                <UserCircle2 size={30} />
-              </Button>
-            </Link>
+            <div className="flex items-center gap-5">
+              <Link href="/">
+                <Button className="p-1.5 rounded-full" variants="primary">
+                  <UserCircle2 size={30} />
+                </Button>
+              </Link>
+              <div className="lg:hidden">
+                <MobileNav />
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <div
-        className={`w-full absolute bg-primary py-8 transition-all duration-300 ${
+        className={`hidden lg:flex w-full absolute bg-primary py-8 transition-all duration-300 ${
           scroll ? "-top-[9999px] py-4" : "top-[85px]"
         }`}
       >
