@@ -8,7 +8,7 @@ const ServiceCard = ({ icon, title, description }) => {
       </div>
       <h3 className="h3 text-center">{title}</h3>
       <p className="description">{description}</p>
-      <Button className="w-full bg-primary">اطلاعات بیشتر</Button>
+      <Button className="w-full bg-primary font-bold">اطلاعات بیشتر</Button>
     </div>
   );
 };

@@ -1,6 +1,10 @@
 import { RiFirefoxLine, RiInstagramLine, RiVolumeUpLine } from "react-icons/ri";
 
 import ServiceCard from "./modules/ServiceCard";
+import Products from "./Products";
+import ItemsList from "./modules/ItemsList";
+import { products } from "@/constants/list";
+import { Badge } from "./ui/badge";
 
 const services = [
   {
@@ -25,7 +29,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section>
+    <section className="relative mb-20">
       <div className="container mx-auto">
         <div className="space-y-10">
           <h2 className="section-title">خدمات نهال آی‌تی</h2>
@@ -33,6 +37,20 @@ const Services = () => {
             {services.map((item, index) => (
               <ServiceCard {...item} key={index} />
             ))}
+          </div>
+          <div className="relative bg-primary py-5 px-10 rounded-2xl">
+            <Badge
+              className="w-14 h-14 absolute -top-5 -left-5 text-lg font-extrabold -rotate-45 z-10"
+              variant="destructive"
+            >
+              50%
+            </Badge>
+            <ItemsList
+              type="products"
+              list={products}
+              containerStyles="grid gap-5 sm:grid-cols-2 md:grid-cols-3"
+              itemStyles="group bg-white"
+            />
           </div>
         </div>
       </div>

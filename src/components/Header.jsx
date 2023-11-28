@@ -52,7 +52,7 @@ const Header = () => {
         </div>
       </div>
       <div
-        className={`hidden lg:flex w-full absolute bg-primary py-8 transition-all duration-300 ${
+        className={`hidden lg:flex w-full absolute bg-primary py-8 transition-all duration-500 ${
           scroll ? "-top-[9999px] py-4" : "top-[85px]"
         }`}
       >

@@ -50,6 +50,7 @@ const Hero = () => {
             <SwiperSlide key={index}>
               <Link href={item.pathname}>
                 <Image
+                className="object-cover object-right"
                   src={`/assets/images/hero/hero-slide-${item.slide}.png`}
                   fill
                   priority
