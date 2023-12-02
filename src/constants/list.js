@@ -1,3 +1,18 @@
+const heroSlides = [
+  {
+    pathname: "/",
+    image: "/assets/images/hero/hero-slide-1.png",
+  },
+  {
+    pathname: "/",
+    image: "/assets/images/hero/hero-slide-2.png",
+  },
+  {
+    pathname: "/",
+    image: "/assets/images/hero/hero-slide-3.png",
+  },
+];
+
 const products = [
   {
     image: "/assets/images/product-1.png",
@@ -25,4 +40,31 @@ const products = [
   },
 ];
 
-export { products };
+const cooperationsSlides = [
+  {
+    pathname: "/",
+    image: "/assets/images/cooperations/Digikala.png",
+  },
+  {
+    pathname: "/",
+    image: "/assets/images/cooperations/Shab.png",
+  },
+  {
+    pathname: "/",
+    image: "/assets/images/cooperations/SarzaminHooshmand.png",
+  },
+  {
+    pathname: "/",
+    image: "/assets/images/cooperations/Digikala.png",
+  },
+  {
+    pathname: "/",
+    image: "/assets/images/cooperations/Shab.png",
+  },
+  {
+    pathname: "/",
+    image: "/assets/images/cooperations/SarzaminHooshmand.png",
+  },
+];
+
+export { heroSlides, products, cooperationsSlides };

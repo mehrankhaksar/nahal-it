@@ -1,65 +1,26 @@
-"use client";
+import { ChevronRight, ChevronLeft } from "lucide-react";
 
-import React from "react";
+import { heroSlides } from "@/constants/list";
 
-import Link from "next/link";
-import Image from "next/image";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
-
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-
-const heroSlides = [
-  {
-    pathname: "/",
-    slide: 1,
-  },
-  {
-    pathname: "/",
-    slide: 2,
-  },
-  {
-    pathname: "/",
-    slide: 3,
-  },
-];
+import Slider from "./modules/Slider";
 
 const Hero = () => {
   return (
-    <section className="pt-44 pb-24">
+    <section className="mt-44 mb-24">
       <div className="container mx-auto">
-        <Swiper
-          className="w-full h-[400px] rounded-[30px]"
-          style={{
-            "--swiper-navigation-size": "35px",
-            "--swiper-navigation-color": "#16A34A",
-            "--swiper-pagination-bullet-width": "85px",
-            "--swiper-pagination-bullet-height": "5px",
-            "--swiper-pagination-color": "#16A34A",
-            "--swiper-pagination-bullet-border-radius": "2.5px",
-          }}
-          slidesPerView={1}
-          modules={[Navigation, Pagination]}
-          navigation={true}
+        <Slider
+          swiperStyles="w-full h-[250px]"
+          navigationContainerStyles="absolute top-1/2 -translate-y-1/2 z-10"
+          rightNavigationContainerStyles="right-0"
+          leftNavigationContainerStyles="left-0"
+          navigationStyles="w-fit h-fit text-primary bg-transparent transition-transform hover:bg-transparent hover:scale-125"
+          navigationIcons={[
+            <ChevronRight size={50} />,
+            <ChevronLeft size={50} />,
+          ]}
+          slides={heroSlides}
           pagination={{ clickable: true }}
-        >
-          {heroSlides.map((item, index) => (
-            <SwiperSlide key={index}>
-              <Link href={item.pathname}>
-                <Image
-                className="object-cover object-right"
-                  src={`/assets/images/hero/hero-slide-${item.slide}.png`}
-                  fill
-                  priority
-                  alt="Slide"
-                />
-              </Link>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        />
       </div>
     </section>
   );

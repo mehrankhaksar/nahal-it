@@ -76,5 +76,9 @@
 }
 
 .description {
-  @apply text-sm text-muted-foreground text-justify lg:text-base;
+  @apply text-sm text-justify lg:text-base;
+}
+
+.hero-swiper-custom-bullet {
+  @apply w-[10px] h-[10px] bg-red-500;
 }

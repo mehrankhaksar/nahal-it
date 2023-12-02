@@ -1,7 +1,10 @@
+import React from "react";
+
 import Image from "next/image";
 import Link from "next/link";
 
 import { Button } from "../ui/button";
+import { Separator } from "../ui/separator";
 
 const ProductCard = ({
   image,
@@ -21,17 +24,24 @@ const ProductCard = ({
           <h3 className="h2">{title}</h3>
           <p className="description font-normal">{description}</p>
         </div>
-        <ul className="group-[]:hidden divide-y divide-black">
+        <ul className="group-[]:hidden">
           {capabilities.map((item, index) => (
-            <li className="py-2.5" key={index}>
-              {item}
-            </li>
+            <React.Fragment key={index}>
+              <li className="py-2.5">{item}</li>
+              {capabilities.length !== index + 1 && (
+                <Separator className="bg-secondary-foreground" />
+              )}
+            </React.Fragment>
           ))}
         </ul>
+        <Separator className="group-[]:hidden bg-secondary-foreground" />
         <Button className="w-full font-bold bg-[#515E64] rounded-xl hover:bg-[#515E64]/80">
           <Link href="/">اطلاعات بیشتر</Link>
         </Button>
-        <div className="group-[]:hidden">تاریخ تولید: {date}</div>
+        <Separator className="group-[]:hidden bg-secondary-foreground" />
+        <div className="group-[]:hidden text-secondary-foreground/50">
+          تاریخ تولید: {date}
+        </div>
       </div>
     </div>
   );

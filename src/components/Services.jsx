@@ -38,7 +38,7 @@ const Services = () => {
               <ServiceCard {...item} key={index} />
             ))}
           </div>
-          <div className="relative bg-primary py-5 px-10 rounded-2xl">
+          <div className="relative bg-primary p-10 px-5 rounded-2xl sm:py-5 sm:px-10">
             <Badge
               className="w-14 h-14 absolute -top-5 -left-5 text-lg font-extrabold -rotate-45 z-10"
               variant="destructive"
