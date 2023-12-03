@@ -18,42 +18,40 @@ const Header = () => {
 
   React.useEffect(() => {
     const isScrolled = window.addEventListener("scroll", () => {
-      window.scrollY > 50 ? setScroll(true) : setScroll(false);
+      window.scrollY > 25 ? setScroll(true) : setScroll(false);
     });
 
     return () => window.removeEventListener("scroll", isScrolled);
   }, []);
 
   return (
-    <header className="sticky bg-white top-0 z-40">
-      <div
-        className={`h-[85px] transition-all duration-300 ${
-          scroll ? "py-1.5 shadow-xl" : "py-3"
-        }`}
-      >
-        <div className="container mx-auto">
-          <div className={`flex justify-between items-center`}>
-            <HeaderLogo />
-            <Nav
-              containerStyles="hidden lg:flex items-center gap-5"
-              linkStyles="text-lg font-medium"
-            />
-            <div className="flex items-center gap-5">
-              <Link href="/">
-                <Button className="p-1.5 rounded-full" variants="primary">
-                  <UserCircle2 size={30} />
-                </Button>
-              </Link>
-              <div className="lg:hidden">
-                <MobileNav />
-              </div>
+    <header
+      className={`flex items-center sticky bg-white top-0 z-40 transition-all duration-300 ${
+        scroll ? "h-[85px] shadow-xl" : "h-[100px]"
+      }`}
+    >
+      <div className="container mx-auto">
+        <div className={`flex justify-between items-center`}>
+          <HeaderLogo />
+          <Nav
+            containerStyles="hidden lg:flex items-center gap-5"
+            linkStyles="text-lg font-medium"
+          />
+          <div className="flex items-center gap-5">
+            <Link href="/">
+              <Button className="p-1.5 rounded-full" variants="primary">
+                <UserCircle2 size={30} />
+              </Button>
+            </Link>
+            <div className="lg:hidden">
+              <MobileNav />
             </div>
           </div>
         </div>
       </div>
       <div
         className={`hidden lg:flex w-full absolute bg-primary py-8 transition-all duration-500 ${
-          scroll ? "-top-[9999px] py-4" : "top-[85px]"
+          scroll ? "-top-[9999px] py-4" : "top-[100px]"
         }`}
       >
         <div className="container mx-auto">

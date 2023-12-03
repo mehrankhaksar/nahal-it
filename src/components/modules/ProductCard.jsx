@@ -7,11 +7,12 @@ import { Button } from "../ui/button";
 import { Separator } from "../ui/separator";
 
 const ProductCard = ({
+  id,
   image,
   title,
   description,
   capabilities,
-  date,
+  createdAt,
   itemStyles,
 }) => {
   return (
@@ -35,12 +36,14 @@ const ProductCard = ({
           ))}
         </ul>
         <Separator className="group-[]:hidden bg-secondary-foreground" />
-        <Button className="w-full font-bold bg-[#515E64] rounded-xl hover:bg-[#515E64]/80">
-          <Link href="/">اطلاعات بیشتر</Link>
-        </Button>
+        <Link href={`/product/${id}`}>
+          <Button className="w-full font-bold bg-[#515E64] rounded-xl hover:bg-[#515E64]/80">
+            اطلاعات بیشتر
+          </Button>
+        </Link>
         <Separator className="group-[]:hidden bg-secondary-foreground" />
         <div className="group-[]:hidden text-secondary-foreground/50">
-          تاریخ تولید: {date}
+          تاریخ تولید: {createdAt}
         </div>
       </div>
     </div>

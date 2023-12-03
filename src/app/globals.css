@@ -56,6 +56,10 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  a {
+    @apply block;
+  }
 }
 
 .h2 {
@@ -66,8 +70,13 @@
   @apply text-xl font-bold;
 }
 
+.h4 {
+  @apply text-xl font-semibold;
+}
+
 .h2,
-.h3 {
+.h3,
+.h4 {
   @apply tracking-[-1px];
 }
 
@@ -77,8 +86,4 @@
 
 .description {
   @apply text-sm text-justify lg:text-base;
-}
-
-.hero-swiper-custom-bullet {
-  @apply w-[10px] h-[10px] bg-red-500;
 }
