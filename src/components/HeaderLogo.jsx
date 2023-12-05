@@ -3,12 +3,11 @@ import Image from "next/image";
 
 const HeaderLogo = () => {
   return (
-    <Link href="/">
+    <Link className="inline-block w-[125px] h-[85px] relative" href="/">
       <Image
         src="/assets/images/logo.png"
-        width={120}
-        height={60}
-        priority
+        layout="fill"
+        objectFit="contain"
         alt="Logo"
       />
     </Link>
