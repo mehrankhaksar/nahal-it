@@ -1,3 +1,22 @@
+const sidebarLinks = [
+  {
+    pathname: "/",
+    label: "داشبورد",
+  },
+  {
+    pathname: "/",
+    label: "منو‌ها",
+  },
+  {
+    pathname: "/",
+    label: "محصولات",
+  },
+  {
+    pathname: "/",
+    label: "دسته بندی محصولات",
+  },
+];
+
 const heroSlides = [
   {
     pathname: "/",
@@ -82,4 +101,29 @@ const cooperationsSlides = [
   },
 ];
 
-export { heroSlides, products, cooperationsSlides };
+const dahboardUsersList = [
+  {
+    id: 1,
+    username: "Mohammadaa1382",
+    email: "mohammadgmailco_13@gmail.com",
+    status: true,
+    role: "Admin",
+    password: "admin123",
+  },
+  {
+    id: 2,
+    username: "Ali43irwww_90",
+    email: "Ali43irwww_90@gmail.com",
+    status: false,
+    role: "Writer",
+    password: "123ali@azar",
+  },
+];
+
+export {
+  sidebarLinks,
+  heroSlides,
+  products,
+  cooperationsSlides,
+  dahboardUsersList,
+};
