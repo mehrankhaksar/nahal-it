@@ -3,8 +3,8 @@ import React from "react";
 import Link from "next/link";
 
 import { sidebarLinks } from "@/constants/list";
-import { Separator } from "./ui/separator";
-import { Button } from "./ui/button";
+import { Separator } from "../ui/separator";
+import { Button } from "../ui/button";
 
 const Sidebar = () => {
   return (

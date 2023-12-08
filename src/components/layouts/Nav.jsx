@@ -1,28 +1,13 @@
 "use client";
 
-import React from "react";
-
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 import { motion } from "framer-motion";
 
-const activeLinkVariants = {};
+import { headerLinks } from "@/constants/list";
 
-const headerLinks = [
-  {
-    pathname: "/",
-    label: "خانه",
-  },
-  {
-    pathname: "/categories",
-    label: "دسته بندی محصولات",
-  },
-  {
-    pathname: "/blog",
-    label: "بلاگ",
-  },
-];
+const activeLinkVariants = {};
 
 const Nav = ({ containerStyles, linkStyles, activeLinkStyles }) => {
   const pathname = usePathname();

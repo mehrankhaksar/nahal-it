@@ -59,13 +59,13 @@ const DashboardPage = () => {
                     className="w-full h-fit py-2.5 rounded-l-none"
                     type="button"
                   >
-                    <Trash2 size={20} />
+                    <Trash2 size={16} />
                   </Button>
                   <Button
                     className="w-full h-fit bg-[#FFCB05] py-2.5 rounded-r-none hover:bg-[#FFCB05]/80"
                     type="button"
                   >
-                    <PenSquare size={20} />
+                    <PenSquare size={16} />
                   </Button>
                 </TableCell>
               </TableRow>

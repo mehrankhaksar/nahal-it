@@ -1,3 +1,18 @@
+const headerLinks = [
+  {
+    pathname: "/",
+    label: "خانه",
+  },
+  {
+    pathname: "/categories",
+    label: "دسته بندی محصولات",
+  },
+  {
+    pathname: "/blog",
+    label: "بلاگ",
+  },
+];
+
 const sidebarLinks = [
   {
     pathname: "/",
@@ -14,6 +29,29 @@ const sidebarLinks = [
   {
     pathname: "/",
     label: "دسته بندی محصولات",
+  },
+];
+
+const footerLinks = [
+  {
+    pathname: "/",
+    label: "خانه",
+  },
+  {
+    pathname: "/categories",
+    label: "دسته بندی محصولات",
+  },
+  {
+    pathname: "/blog",
+    label: "بلاگ",
+  },
+  {
+    pathname: "/about-us",
+    label: "درباره ما",
+  },
+  {
+    pathname: "/contact-us",
+    label: "تماس با ما",
   },
 ];
 
@@ -121,7 +159,9 @@ const dahboardUsersList = [
 ];
 
 export {
+  headerLinks,
   sidebarLinks,
+  footerLinks,
   heroSlides,
   products,
   cooperationsSlides,

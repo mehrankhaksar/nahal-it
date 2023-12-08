@@ -85,5 +85,5 @@
 }
 
 .description {
-  @apply text-sm text-justify lg:text-base;
+  @apply text-sm font-semibold text-justify leading-[25px];
 }

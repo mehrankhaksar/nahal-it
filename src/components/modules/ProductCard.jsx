@@ -5,6 +5,7 @@ import Link from "next/link";
 
 import { Button } from "../ui/button";
 import { Separator } from "../ui/separator";
+import TextTruncate from "./TextTruncate";
 
 const ProductCard = ({
   id,
@@ -23,7 +24,7 @@ const ProductCard = ({
       <div className="space-y-5 text-sm font-bold p-5">
         <div>
           <h3 className="h2">{title}</h3>
-          <p className="description font-normal">{description}</p>
+          <TextTruncate element="p" line={3} text={description} />
         </div>
         <ul className="group-[]:hidden">
           {capabilities.map((item, index) => (

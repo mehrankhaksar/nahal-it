@@ -5,9 +5,9 @@ const HeaderLogo = () => {
   return (
     <Link className="inline-block w-[125px] h-[85px] relative" href="/">
       <Image
+        className="object-contain"
         src="/assets/images/logo.png"
-        layout="fill"
-        objectFit="contain"
+        fill
         alt="Logo"
       />
     </Link>

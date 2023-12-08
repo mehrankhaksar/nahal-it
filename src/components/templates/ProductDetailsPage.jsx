@@ -3,19 +3,17 @@ import Image from "next/image";
 import { Button } from "../ui/button";
 
 const ProductDetailsPage = ({
-  product: {
-    image,
-    title,
-    description,
-    updatedAt,
-    createdAt,
-    salesNumber,
-    visitsNumber,
-    price,
-  },
+  image,
+  title,
+  description,
+  updatedAt,
+  createdAt,
+  salesNumber,
+  visitsNumber,
+  price,
 }) => {
   return (
-    <section className="mb-16">
+    <section className="my-10 md:mt-40">
       <div className="container mx-auto">
         <div className="space-y-16">
           <div className="flex gap-10">

@@ -6,10 +6,10 @@ import Slider from "./modules/Slider";
 
 const Hero = () => {
   return (
-    <section className="mt-44 mb-24">
+    <section className="mb-24">
       <div className="container mx-auto">
         <Slider
-          swiperStyles="w-full h-[250px]"
+          swiperStyles="w-full h-[400px] rounded-3xl"
           navigationContainerStyles="absolute top-1/2 -translate-y-1/2 z-10"
           rightNavigationContainerStyles="right-0"
           leftNavigationContainerStyles="left-0"

@@ -1,14 +1,12 @@
-import React from "react";
+import { cooperationsSlides } from "@/constants/list";
 
 import { ArrowRight, ArrowLeft } from "lucide-react";
-
-import { cooperationsSlides } from "@/constants/list";
 
 import Slider from "./modules/Slider";
 
 const Cooperations = () => {
   return (
-    <section className="mb-20">
+    <section>
       <div className="container mx-auto">
         <div className="space-y-10">
           <h1 className="section-title">همکاری</h1>
@@ -16,7 +14,7 @@ const Cooperations = () => {
             مجموعه نهال آی تی افتخار همکاری با :
           </h2>
           <Slider
-            swiperStyles="w-full h-[250px]"
+            swiperStyles="w-full h-[300px]"
             navigationContainerStyles="flex items-center bg-primary px-2.5 rounded-md"
             navigationStyles="w-fit h-fit text-primary bg-secondary p-1.5 border-2 border-solid border-transparent rounded-full hover:text-secondary hover:border-secondary"
             navigationIcons={[<ArrowRight />, <ArrowLeft />]}
